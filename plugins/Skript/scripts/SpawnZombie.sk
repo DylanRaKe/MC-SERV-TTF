@@ -1,6 +1,6 @@
 command /zombspawn:
 	trigger:
 		loop all blocks:
-			set loop-block location to {zombpos}
+			set {%location of loop-value%} to {zombpos}
 			if loop-block is red stained clay:
 				spawn a zombie at {zombpos}
