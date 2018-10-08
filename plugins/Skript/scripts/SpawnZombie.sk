@@ -2,4 +2,5 @@ command /zombspawn:
 	trigger:
 		loop all blocks:
 			if loop-block is red stained clay:
+				send "&cBlock trouvé !"
 				spawn a zombie at {%loop-block%}
