@@ -1,0 +1,8 @@
+//command /addZombSpawn:
+	trigger:
+		add player's location to {zombSpawn::*}
+
+command /spawnz:
+	trigger:
+		loop {zombSpawn::*}:
+			spawn a zombie at loop-value
