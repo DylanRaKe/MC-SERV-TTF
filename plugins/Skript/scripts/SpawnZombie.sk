@@ -1,6 +1,5 @@
 command /zombspawn [<text>]:
 	trigger:
-		send "command bien envoyé ^^"
 		loop blocks in radius 10 around player:
 			if loop-block is red stained clay:
 				send "&cBlock trouvé !"
@@ -9,10 +8,10 @@ command /zombspawn [<text>]:
 					if arg is not set:
 						spawn a zombie at {zombpos}
 					else:
-						set {wait_time} to 0
-						while {wait_time} is not equal to arg:
-							add 1 to {wait_time}
-							spawn a zombie at {zombpos}
+						add 1 to {wait_time}
+						wait 1 second
+						arg is a number
+						spawn arg zombie at {zombpos}
 
 command /zombkill:
 	trigger:
