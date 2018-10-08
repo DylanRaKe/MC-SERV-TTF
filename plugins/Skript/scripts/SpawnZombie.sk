@@ -11,7 +11,7 @@ command /zombspawn [<text>]:
 						add 1 to {wait_time}
 						wait 1 second
 						arg is a number
-						spawn arg zombie at {zombpos}
+						spawn %arg% zombie at {zombpos}
 
 command /zombkill:
 	trigger:
