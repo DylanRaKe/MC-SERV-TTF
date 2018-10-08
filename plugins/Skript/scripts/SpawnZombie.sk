@@ -4,4 +4,6 @@ command /zombspawn:
 		loop blocks in radius 10 around player:
 			if loop-block is red stained clay:
 				send "&cBlock trouvé !"
-				spawn a zombie at loop-block
+				if block above the loop-block is air:
+					set {zombpos} to the block above the loop-block
+					spawn a zombie at {zombpos}
