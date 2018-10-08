@@ -1,6 +1,7 @@
 command /zombspawn:
 	trigger:
-		loop blocks in radius 500 around player:
+		send "command bien envoyé ^^"
+		loop blocks in radius 10 around player:
 			if loop-block is red stained clay:
 				send "&cBlock trouvé !"
 				spawn a zombie at {%loop-block%}
