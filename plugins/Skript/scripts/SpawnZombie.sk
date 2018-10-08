@@ -1,8 +1,5 @@
-command /addZombSpawn:
+command /zombspawn:
 	trigger:
-		add player's location to {zombSpawn::*}
-
-command /spawnz:
-	trigger:
-		loop {zombSpawn::*}:
-			spawn a zombie at loop-value
+		loop blocks:
+			if loop-block is red stained clay:
+				spawn a zombie at loop-value
